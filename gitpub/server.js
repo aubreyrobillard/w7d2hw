@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
     res.send("WELCOME TO THE GITPUB APP!")
 })
 app.get("/drinks", (req, res) => {
-    res.render("index.ejs")
+    res.render("index.ejs", {drinks}) //2nd var tells index where to pull drinks from
 })
 
 ///////////////////////////

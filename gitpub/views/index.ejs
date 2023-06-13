@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="../server.js"></script>
+
 </head>
 <body>
     <style>
@@ -12,6 +14,12 @@
     </style>
     
     <h1>Welcome to gitPub App!</h1>
+
+    <ul>
+         <% for (let i = 0; i < drinks.length; i++){ %>
+          <li><a href="/drinks/<%= i %>"><%= drinks[i].name %></a></li> 
+           <% } %>
+    </ul>
     
 </body>
 </html>
