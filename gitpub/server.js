@@ -4,6 +4,7 @@
 const express = require("express")
 const app = express()
 const PORT = 3500
+const drinks = require("./models/drinks.js")
 
 //////////////////////
 // Declare Middleware
@@ -15,6 +16,9 @@ const PORT = 3500
 // INDUCES - Index, New, Delete, Update, Create, Edit, Show
 app.get("/", (req, res) => {
     res.send("WELCOME TO THE GITPUB APP!")
+})
+app.get("/drinks", (req, res) => {
+    res.send(drinks)
 })
 
 ///////////////////////////
