@@ -21,6 +21,10 @@ app.get("/drinks", (req, res) => {
     res.render("index.ejs", {drinks}) //2nd var tells index where to pull drinks from
 })
 
+app.get("/drinks/:id", (req, res) => {
+    res.send(req.params.id)
+})
+
 ///////////////////////////
 // Server Listener
 ///////////////////////////
