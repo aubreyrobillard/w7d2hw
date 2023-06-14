@@ -22,7 +22,12 @@ app.get("/drinks", (req, res) => {
 })
 
 app.get("/drinks/:id", (req, res) => {
-    res.send(req.params.id)
+    // get drink id from the url
+    const id = req.params.id;
+    // specify the drink
+    const drink = drinks[id];
+    // console.log(id)
+    res.render("show.ejs", {drink, id})
 })
 
 ///////////////////////////

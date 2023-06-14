@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../server.js"></script>
+
+</head>
+<body>
+    <style>
+        body {margin: 0; color: navy; background-color: tan; display: flex; flex-direction: column; align-items: center;}
+        img {max-width: 200pt;}
+        .drinkInfo {justify-content: center; color: rgb(161, 37, 12); margin: auto}
+        h1, h2, h3 {text-align: center;}
+    </style>
+    
+    <div class="drinkInfo">
+        <h1>At Foo Bar</h1>
+        <h2>name: <%= drink.name %></h2>
+        <h3>price: $<%= drink.price %></h3>
+        <img src="<%= drink.image %>.png">
+    </div>
+  
+    
+    <a href="/drinks"><button>Go back to Drink List</button></a>
+</body>
+</html>
